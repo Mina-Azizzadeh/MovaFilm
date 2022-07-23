@@ -6,13 +6,15 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { RegistrationComponent } from './registration.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CommonModule } from '@angular/common';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
     SignInComponent,
     SignUpComponent,
     EntrancePermissionComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     RegistrationRoutingModule,
