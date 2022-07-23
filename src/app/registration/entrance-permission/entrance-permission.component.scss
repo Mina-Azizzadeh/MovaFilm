@@ -1,0 +1,50 @@
+.main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin-top: 40px;
+    }
+    .Lets-you {
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .continue {
+        border: 1px solid rgb(236, 236, 236);
+        border-radius: 10px;
+        width: 90%;
+        margin-bottom: 15px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-in {
+        background-color: #e21221;
+        color: white;
+        width: 90vw;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 10px 10px rgba(226, 18, 32, 0.267);
+        margin-bottom: 25px;
+    }
+    .or {
+        margin-bottom: 15px;
+    }
+    .sign-up {
+        color: #e21221;
+        font-weight: 600;
+    }
+    .creat-account{
+        color: rgb(151, 151, 151);
+        font-size: 14px;
+    }
+}

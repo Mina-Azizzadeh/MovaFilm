@@ -33,7 +33,7 @@
             text-align: center;
             color: white;
             button {
-                background-color: #E21221;
+                background-color: #e21221;
                 color: white;
                 width: 90vw;
                 height: 50px;
@@ -45,13 +45,17 @@
     }
 }
 
-.logo{
+.logo {
     width: 100vw;
-    height: 140vw;
+    margin-top: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
+    img {
         width: 35vw;
     }
+}
+
+.loading{
+    margin-top: 100px;
 }

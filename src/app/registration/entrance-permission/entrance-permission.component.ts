@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'entrance-permission',
+  selector: 'app-entrance-permission',
   templateUrl: './entrance-permission.component.html',
   styleUrls: ['./entrance-permission.component.scss']
 })
