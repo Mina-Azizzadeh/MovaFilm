@@ -4,8 +4,8 @@ import { EntrancePermissionComponent } from './entrance-permission/entrance-perm
 import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
-  { path: 'permission', component: EntrancePermissionComponent },
-  { path: 'signIn', component: SignInComponent }
+  { path: '', component: EntrancePermissionComponent },
+  { path: 'signIn', component: SignInComponent },
 ];
 
 @NgModule({

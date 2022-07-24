@@ -19,7 +19,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   imports: [
     RegistrationRoutingModule,
     CommonModule
-    ],
-  providers: [],
+      ],
+    exports: [],
 })
 export class registrationModule { }

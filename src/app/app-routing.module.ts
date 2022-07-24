@@ -9,16 +9,17 @@ import { SignUpComponent } from './registration/sign-up/sign-up.component';
 const routes: Routes = [
   {
     path: '',
-    component: ForgotPasswordComponent,
+    component: RegistrationComponent,
   },
   {
-    path: 'Entrance',
+    path: 'registration',
     loadChildren: () =>
       import('./registration/registration.module').then(
         (m) => m.registrationModule
       ),
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

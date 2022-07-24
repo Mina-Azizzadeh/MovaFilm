@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { trigger, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'registration',
@@ -18,7 +17,9 @@ import { trigger, style, transition, animate } from '@angular/animations';
   ],
 })
 export class RegistrationComponent implements OnInit {
+
   public showWelcomToMova = true;
+
   constructor() {}
 
   ngOnInit(): void {
