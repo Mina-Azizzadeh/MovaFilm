@@ -7,7 +7,6 @@ import { RegistrationComponent } from './registration.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CommonModule } from '@angular/common';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RegistrationComponent,
     ForgotPasswordComponent,
   ],
-  imports: [RegistrationRoutingModule, CommonModule, FontAwesomeModule],
+  imports: [RegistrationRoutingModule, CommonModule],
   exports: [],
 })
 export class registrationModule {}
