@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EntrancePermissionComponent } from './registration/entrance-permission/entrance-permission.component';
-import { ForgotPasswordComponent } from './registration/forgot-password/forgot-password.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { SignInComponent } from './registration/sign-in/sign-in.component';
-import { SignUpComponent } from './registration/sign-up/sign-up.component';
+import { EntrancePermissionComponent } from './auth/entrance-permission/entrance-permission.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { RegistrationComponent } from './auth/registration.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
@@ -12,9 +12,9 @@ const routes: Routes = [
     component: RegistrationComponent,
   },
   {
-    path: 'registration',
+    path: 'auth',
     loadChildren: () =>
-      import('./registration/registration.module').then(
+      import('./auth/registration.module').then(
         (m) => m.registrationModule
       ),
   },
