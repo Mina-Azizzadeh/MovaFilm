@@ -12,6 +12,11 @@ const routes: Routes = [
     component: RegistrationComponent,
   },
   {
+    path: 'Home',
+    loadChildren: () =>
+      import('./pages/pages.routing').then((m) => m.PagesRoutingModule),
+  },
+  {
     path: 'registration',
     loadChildren: () =>
       import('./registration/registration.module').then(
@@ -19,7 +24,6 @@ const routes: Routes = [
       ),
   },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Top 10 Moview This Week",
+    "id": 1,
+    "films": [
+      {
+        "name": "christian",
+        "imageCove": "./christian-movies-2019-finding-grace-1559338755.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./download.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./images.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./large_moon-poster.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./MV5BMTMzOTY1MTg2NV5BMl5BanBnXkFtZTcwMzEzODg5Mg@@._V1_FMjpg_UX1000_.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./Point_Blank_poster.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      },
+      {
+        "name": "christian",
+        "imageCove": "./The_Silence_2019_film_poster.jpg",
+        "rate": 9.5,
+        "discreption": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries"
+      }
+    ]
+  }
+]
