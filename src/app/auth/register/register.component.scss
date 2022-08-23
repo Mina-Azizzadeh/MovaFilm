@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     img {
-        margin-top: 40px;
+        margin-top: 10px;
         margin-bottom: 30px;
     }
     .creat-account {
@@ -28,21 +28,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0px 10px 10px rgba(226, 18, 32, 0.267);
+        box-shadow: 0px 5px 10px rgba(226, 18, 32, 0.267);
         margin-bottom: 25px;
     }
-    .email {
+    .input-auth {
         margin-bottom: 20px;
         width: 90vw;
         height: 40px;
-        border: 1px solid rgb(207, 207, 207);
-        border-radius: 10px;
-    }
-    .password {
-        margin-bottom: 20px;
-        width: 90vw;
-        height: 40px;
-        border: 1px solid rgb(207, 207, 207);
+        border: 1px solid rgb(247, 247, 247);
         border-radius: 10px;
     }
     .Remember {
@@ -53,23 +46,42 @@
         }
     }
     .continue-with {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .icon {
-        border: 1px solid rgb(236, 236, 236);
-        padding: 15px;
+        border: 1px solid rgb(240, 240, 240);
+        width: 100%;
+        padding: 12px 0px;
         border-radius: 15px;
         margin: 5px;
     }
-    .icon-app{
-        margin-bottom: 30px;
+    .icon-app {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
     }
     .sign-up {
         color: #e21221;
         font-weight: 600;
     }
-    .login{
+    .login {
         color: rgb(151, 151, 151);
         font-size: 14px;
     }
+    i {
+        font-size: 18px;
+    }
+}
+.fa-arrow-left {
+    font-size: 18px;
+    color: black;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.icon-input {
+    color: #9e9e9e;
+    border-radius: 20px;
+    margin: 0px 5px;
 }

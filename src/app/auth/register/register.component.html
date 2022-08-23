@@ -1,0 +1,54 @@
+<i class="fa-solid fa-arrow-left" routerLink="/"></i>
+<div class="main">
+  <img
+    src="assets/images/WhatsApp Image 2022-06-27 at 3.11.59 PM.jpeg"
+    width="100px"
+  />
+  <div class="creat">{{ login ? "Login to" : "Create" }} Your Account</div>
+  <nz-input-group [nzPrefix]="suffixIconSearch" class="input-auth">
+    <input type="text" nz-input placeholder="Email" />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <i class="fa-solid fa-envelope icon-input"></i>
+  </ng-template>
+  <nz-input-group
+    [nzSuffix]="suffixTemplate"
+    [nzPrefix]="suffixIconpassword"
+    class="input-auth"
+  >
+    <input
+      [type]="passwordVisible ? 'text' : 'password'"
+      nz-input
+      placeholder="Password"
+    />
+  </nz-input-group>
+  <ng-template #suffixTemplate>
+    <i
+      class="icon-input"
+      nz-icon
+      [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+      (click)="passwordVisible = !passwordVisible"
+    ></i>
+  </ng-template>
+  <ng-template #suffixIconpassword>
+    <i class="fa-solid fa-lock icon-input"></i>
+  </ng-template>
+
+  <div class="Remember">
+    <input class="form-check-input" type="checkbox" id="flexCheckDefault" />
+    <span>Remember me</span>
+  </div>
+  <div class="sign-in" routerLink="/Home">Sign in</div>
+  <div class="continue-with">or continue with</div>
+  <div class="icon-app">
+    <span class="icon"> <i class="fa fa-facebook-f"></i> </span>
+    <span class="icon"> <i class="fa fa-google fa-3x"></i> </span>
+    <span class="icon"> <i class="fa fa-apple"></i> </span>
+  </div>
+  <div class="login">
+    Already have an account?
+    <span class="sign-up" (click)="login = !login">{{
+      login ? "Sign up" : "Sign in"
+    }}</span>
+  </div>
+</div>
