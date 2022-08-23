@@ -85,3 +85,7 @@
     border-radius: 20px;
     margin: 0px 5px;
 }
+.checkbox-warning-filled [type="checkbox"][class*="filled-in"]:checked + label:after {
+    border-color: #ff8800;
+    background-color: #ff8800;
+}

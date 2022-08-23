@@ -32,6 +32,12 @@
             bottom: 30px;
             text-align: center;
             color: white;
+            p{
+                font-size: 16px;
+            }
+            h1 {
+                color: white;
+            }
             button {
                 background-color: #e21221;
                 color: white;
@@ -54,8 +60,4 @@
     img {
         width: 35vw;
     }
-}
-
-.loading{
-    margin-top: 100px;
 }

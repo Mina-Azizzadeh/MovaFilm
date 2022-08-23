@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { BidiModule } from '@angular/cdk/bidi';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BidiModule } from '@angular/cdk/bidi';
     CommonModule,
     NzInputModule,
     NzIconModule,
-    BidiModule
+    BidiModule,
+    ComponentsModule,
   ],
   exports: [],
 })

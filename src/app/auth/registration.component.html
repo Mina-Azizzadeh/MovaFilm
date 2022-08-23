@@ -2,10 +2,7 @@
 <div class="logo" *ngIf="showWelcomToMova">
     <img [@list2] src="assets/images/WhatsApp Image 2022-06-27 at 3.11.59 PM.jpeg">
 </div>
-<div class="text-center loading" *ngIf="showWelcomToMova">
-    <div class="spinner-border text-danger" role="status">
-    </div>
-</div>
+<loading-spinner *ngIf="showWelcomToMova"></loading-spinner>
 
 <div class="main" *ngIf="!showWelcomToMova">
     <div class="blur">
