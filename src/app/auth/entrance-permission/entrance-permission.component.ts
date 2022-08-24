@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthRoutes } from '../auth-routes';
 
 @Component({
   selector: 'app-entrance-permission',
   templateUrl: './entrance-permission.component.html',
-  styleUrls: ['./entrance-permission.component.scss']
+  styleUrls: ['./entrance-permission.component.scss'],
 })
 export class EntrancePermissionComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  get authRoutes() {
+    return AuthRoutes;
   }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

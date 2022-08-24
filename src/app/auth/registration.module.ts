@@ -7,9 +7,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { RegistrationRoutingModule } from './registration.routing.module';
 import { RegisterComponent } from './register/register.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzIconModule } from 'ng-zorro-antd/icon';
 import { BidiModule } from '@angular/cdk/bidi';
 import { ComponentsModule } from '../components/components.module';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ComponentsModule } from '../components/components.module';
     NzIconModule,
     BidiModule,
     ComponentsModule,
+    FormsModule
   ],
   exports: [],
 })
