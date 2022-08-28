@@ -21,7 +21,7 @@
         background-color: #c1232f;
         color: white;
         width: 90vw;
-        height: 50px;
+        height: 7vh;
         border-radius: 30px;
         border: none;
         cursor: pointer;
@@ -29,12 +29,12 @@
         align-items: center;
         justify-content: center;
         box-shadow: 0px 5px 10px rgba(226, 18, 32, 0.267);
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
     .input-auth {
         margin-bottom: 20px;
         width: 90vw;
-        height: 40px;
+        height: 6vh;
         border: 1px solid rgb(247, 247, 247);
         border-radius: 10px;
     }
@@ -88,4 +88,9 @@
 .checkbox-warning-filled [type="checkbox"][class*="filled-in"]:checked + label:after {
     border-color: #ff8800;
     background-color: #ff8800;
+}
+.forgot-password{
+    color: #e21221;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
