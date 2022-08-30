@@ -11,6 +11,7 @@ import { BidiModule } from '@angular/cdk/bidi';
 import { ComponentsModule } from '../components/components.module';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { FormsModule } from '@angular/forms';
+import { AccountSetupComponent } from './account-setup/account-setup.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     RegistrationComponent,
     ForgotPasswordComponent,
     RegisterComponent,
+    AccountSetupComponent,
   ],
   imports: [
     RegistrationRoutingModule,

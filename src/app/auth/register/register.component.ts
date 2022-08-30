@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthRoutes } from '../auth-routes';
 
 @Component({
@@ -12,12 +12,19 @@ export class RegisterComponent implements OnInit {
   public password?: string;
   public login = true;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private route: Router) {}
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((param) => {
       this.login =
         param.get(AuthRoutes.RegisterationState) === AuthRoutes.Login;
     });
+  }
+
+  onClickRegister() {
+    if (!this.login) {
+      this.route.navigateByUrl(`auth/${AuthRoutes.AccountSetup}`)
+      console.log(AuthRoutes.AccountSetup)
+    }
   }
 }

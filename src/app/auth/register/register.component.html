@@ -42,8 +42,8 @@
     />
     <span>Remember me</span>
   </div>
-  <div class="sign-in">{{ login ? "Sign in" : "Sign up" }}</div>
-  <div class="forgot-password" *ngIf="login">Forgot the password?</div>
+  <div class="sign-in" (click)="onClickRegister()">{{ login ? "Sign in" : "Sign up" }}</div>
+  <div class="forgot-password" *ngIf="login" >Forgot the password?</div>
   <div class="continue-with">or continue with</div>
   <div class="icon-app">
     <span class="icon"> <i class="fa fa-facebook-f"></i> </span>
