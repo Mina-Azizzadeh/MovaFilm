@@ -1,0 +1,43 @@
+<div class="main">
+  <div class="title">
+    <i
+      class="fa-solid fa-arrow-left"
+      [routerLink]="'/auth/' + authRoutes.AccountSetup"
+    ></i>
+    <div>Fill Your Profile</div>
+  </div>
+
+  <div class="profile">
+    <img src="/src/assets/images/download.png" />
+  </div>
+
+  <nz-input-group class="input-profile">
+    <input nz-input placeholder="Full Name" nzBorderless />
+  </nz-input-group>
+  <nz-input-group class="input-profile">
+    <input nz-input placeholder="Nickname" nzBorderless />
+  </nz-input-group>
+  <nz-input-group class="input-profile" [nzSuffix]="suffixIconSearch">
+    <input nz-input placeholder="Email" nzBorderless />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <span nz-icon nzType="mail" nzTheme="outline" class="mail"></span>
+  </ng-template>
+  <nz-input-group class="input-profile">
+    <input nz-input placeholder="Phone Number" nzBorderless />
+  </nz-input-group>
+  <nz-input-group class="input-profile" [nzPrefix]="phoneNumber">
+    <input nz-input placeholder="Phone Number" nzBorderless />
+  </nz-input-group>
+  <ng-template #phoneNumber>
+    <div>+98</div>
+  </ng-template>
+  <nz-select id="gender" nzPlaceHolder="Gender" nzBorderless>
+    <nz-option nzValue="male" nzLabel="male"></nz-option>
+    <nz-option nzValue="female" nzLabel="female"></nz-option>
+  </nz-select>
+</div>
+<div class="footer">
+  <button class="skip">Skip</button>
+  <button class="continue">Continue</button>
+</div>

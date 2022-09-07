@@ -1,1 +1,26 @@
-<p>account-setup works!</p>
+<div class="main">
+  <div class="title">
+    <i class="fa-solid fa-arrow-left" routerLink="/auth"></i>
+    <div>Choose Your Interest</div>
+  </div>
+  <div class="description">
+    Choose your interests and get the best movie recommendations, Don't worry.
+    you can <br />
+    always change it later.
+  </div>
+  <div class="add-interest" *ngFor="let interest of interests">
+    <input type="checkbox" [id]="interest.name" />
+    <label
+      [for]="interest.name"
+      class="interest-name"
+      (click)="onclickInterest(interest)"
+      >{{ interest.name }}</label
+    >
+  </div>
+</div>
+<div class="footer">
+  <button class="skip">Skip</button>
+  <button class="continue" [routerLink]="authRoutes.Profile">
+    Continue
+  </button>
+</div>

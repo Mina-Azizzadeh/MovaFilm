@@ -13,4 +13,7 @@ export class EntrancePermissionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  test(){
+    console.log(this.authRoutes.Login)
+  }
 }

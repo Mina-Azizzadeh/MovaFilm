@@ -1,6 +1,3 @@
-
-
-
 export interface Movie {
   name: string;
   imageCover: string;

@@ -10,8 +10,12 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { BidiModule } from '@angular/cdk/bidi';
 import { ComponentsModule } from '../components/components.module';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountSetupComponent } from './account-setup/account-setup.component';
+import { ProfileComponent } from './account-setup/profile/profile.component';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,7 @@ import { AccountSetupComponent } from './account-setup/account-setup.component';
     ForgotPasswordComponent,
     RegisterComponent,
     AccountSetupComponent,
+    ProfileComponent,
   ],
   imports: [
     RegistrationRoutingModule,
@@ -28,7 +33,11 @@ import { AccountSetupComponent } from './account-setup/account-setup.component';
     NzIconModule,
     BidiModule,
     ComponentsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NzSelectModule,
+    NzUploadModule,
+    NzModalModule
   ],
   exports: [],
 })

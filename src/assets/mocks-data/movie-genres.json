@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Action"
+  },
+  {
+    "id": 2,
+    "name": "Drama"
+  },
+  {
+    "id": 3,
+    "name": "Comedy"
+  },
+  {
+    "id": 4,
+    "name": "Horror"
+  },
+  {
+    "id": 5,
+    "name": "Adventure"
+  },
+  {
+    "id": 6,
+    "name": "Thriller"
+  },
+  {
+    "id": 7,
+    "name": "Ramance"
+  },
+  {
+    "id": 8,
+    "name": "Science"
+  },
+  {
+    "id": 9,
+    "name": "Music"
+  },
+  {
+    "id": 10,
+    "name": "Documentary"
+  },
+  {
+    "id": 11,
+    "name": "Crime"
+  },
+  {
+    "id": 12,
+    "name": "Fantasy"
+  },
+  {
+    "id": 13,
+    "name": "MyStery"
+  },
+  {
+    "id": 14,
+    "name": "Fiction"
+  },
+  {
+    "id": 15,
+    "name": "Animation"
+  },
+  {
+    "id": 16,
+    "name": "War"
+  },
+  {
+    "id": 17,
+    "name": "History"
+  },
+  {
+    "id": 18,
+    "name": "Television"
+  },
+  {
+    "id": 19,
+    "name": "Superheroes"
+  },
+  {
+    "id": 20,
+    "name": "Anime"
+  },
+  {
+    "id": 21,
+    "name": "Sports"
+  },
+  {
+    "id": 22,
+    "name": "K-Drama"
+  }
+]
