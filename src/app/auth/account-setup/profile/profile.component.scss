@@ -1,6 +1,7 @@
 .main {
-    padding: 15px 20px 80px 20px;
+    padding: 15px 20px 0px 20px;
 }
+
 .input-profile {
     margin-bottom: 20px;
     width: 90vw;
@@ -8,23 +9,28 @@
     border: none;
     border-radius: 10px;
 }
+
 .title {
     display: flex;
     align-items: center;
     font-size: 18px;
     font-weight: 600;
 }
+
 .fa-arrow-left {
     color: black;
     margin-right: 15px;
 }
+
 .mail {
     color: #9e9e9e;
 }
+
 #gender {
     width: 90vw;
     border: none;
 }
+
 .footer {
     padding: 10px 20px 15px 20px;
     position: fixed;
@@ -33,6 +39,8 @@
     justify-content: space-between;
     background-color: white;
     width: 100%;
+    margin: 0 auto;
+
     button {
         width: 48%;
         height: 45px;
@@ -40,11 +48,17 @@
         border: none;
         font-weight: 600;
     }
+
     .continue {
         color: white;
         background-color: #e21221;
         box-shadow: 0px 4px 5px rgba(226, 18, 32, 0.267);
     }
+
+    .continue:disabled {
+        background-color: #C1232F;
+    }
+
     .skip {
         background-color: #fce7e9;
         color: #e21221;
@@ -52,13 +66,15 @@
 }
 
 .profile {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 10%;
     text-align: center;
+
     img {
         width: 120px;
         height: 120px;
         border-radius: 50%;
         border: 1px solid #9e9e9e;
+        object-fit: cover;
     }
 }

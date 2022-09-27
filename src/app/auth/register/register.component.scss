@@ -18,7 +18,7 @@
         margin-bottom: 30px;
     }
     .sign-in {
-        background-color: #c1232f;
+        background-color: #E21021;
         color: white;
         width: 90vw;
         height: 7vh;
@@ -28,8 +28,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto ;
         box-shadow: 0px 5px 10px rgba(226, 18, 32, 0.267);
         margin-bottom: 20px;
+    }
+    .sign-in:disabled {
+        background-color: #C1232F;
     }
     .input-auth {
         margin-bottom: 20px;

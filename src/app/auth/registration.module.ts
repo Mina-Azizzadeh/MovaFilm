@@ -16,6 +16,7 @@ import { ProfileComponent } from './account-setup/profile/profile.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     ReactiveFormsModule,
     NzSelectModule,
     NzUploadModule,
-    NzModalModule
+    NzModalModule,
+    FontAwesomeModule
   ],
   exports: [],
 })
