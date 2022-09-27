@@ -2,13 +2,17 @@
 <div class="main">
   <img src="assets/images/WhatsApp Image 2022-06-27 at 3.11.59 PM.jpeg" width="100px" />
   <div class="creat">{{ login ? "Login to" : "Create" }} Your Account</div>
-  <form [formGroup]="formGroup" (ngSubmit)="onClickSubmit()">
+  <div *ngIf="isLoading">
+    <loading-spinner></loading-spinner>
+  </div>
+  <form [formGroup]="formGroup" (ngSubmit)="onClickSubmit()" *ngIf="!isLoading">
     <nz-input-group [nzPrefix]="suffixIconSearch" class="input-auth">
       <input type="text" nz-input placeholder="Email" formControlName="email" />
     </nz-input-group>
     <ng-template #suffixIconSearch>
       <span nz-icon nzType="mail" nzTheme="outline" class="icon-input"></span>
     </ng-template>
+    <div *ngIf="error" class="error">{{error}}</div>
     <nz-input-group [nzSuffix]="suffixTemplate" [nzPrefix]="suffixIconpassword" class="input-auth">
       <input [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="Password"
         formControlName="password" />
@@ -20,6 +24,7 @@
     <ng-template #suffixIconpassword>
       <span nz-icon nzType="lock" nzTheme="outline" class="icon-input"></span>
     </ng-template>
+    <div *ngIf="errorPassword" class="error">{{errorPassword}}</div>
 
     <div class="Remember">
       <input class="form-check-input rememberCheckBox" type="checkbox" id="flexCheckDefault"
