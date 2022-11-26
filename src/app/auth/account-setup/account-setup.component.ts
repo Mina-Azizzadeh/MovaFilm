@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AccountSetupInterest } from 'src/app/model/auth.model';
 import { AuthRoutes } from '../auth-routes';
 import { AccountSetupService } from './account-setup.service';
@@ -9,8 +10,13 @@ import { AccountSetupService } from './account-setup.service';
   styleUrls: ['./account-setup.component.scss'],
 })
 export class AccountSetupComponent implements OnInit {
-  public interests!: AccountSetupInterest[];
-  constructor(private AccountSetup: AccountSetupService) {}
+  public interests!: AccountSetupInterest[]
+  public userInterests: AccountSetupInterest[] = []
+
+  constructor(
+    private AccountSetup: AccountSetupService,
+    private router: Router
+  ) { }
 
   get authRoutes() {
     return AuthRoutes;
@@ -21,7 +27,13 @@ export class AccountSetupComponent implements OnInit {
       this.interests = res;
     });
   }
+
   onclickInterest(interest: AccountSetupInterest) {
-    console.log(interest);
+    this.userInterests.push(interest)
+  }
+
+  continueSubmit() {
+    localStorage.setItem('interested', JSON.stringify(this.userInterests));
+    this.router.navigateByUrl(`auth/${AuthRoutes.AccountSetup}/${AuthRoutes.Profile}`)
   }
 }

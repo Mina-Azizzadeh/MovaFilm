@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
-import { AuthRegister } from '../model/auth.model';
+import { AuthRegister } from '../../model/auth.model';
 
 @Injectable({
   providedIn: 'root',

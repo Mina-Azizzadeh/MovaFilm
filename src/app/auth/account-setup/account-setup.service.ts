@@ -6,8 +6,8 @@ import { AccountSetupInterest } from 'src/app/model/auth.model';
   providedIn: 'root',
 })
 export class AccountSetupService {
-  public interestsUser = '0';
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) { }
 
   getInterests() {
     return this.http.get<AccountSetupInterest[]>(
@@ -15,7 +15,4 @@ export class AccountSetupService {
     );
   }
 
-  setLocalStorag() {
-    localStorage.setItem('interested', this.interestsUser);
-  }
 }
