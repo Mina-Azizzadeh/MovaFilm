@@ -27,6 +27,7 @@ export class ProfileComponent implements OnInit {
       phoneNumber : new FormControl (null , Validators.required ),
       gender : new FormControl (null , Validators.required)
     })
+    
   }
 
   showModal(): void {

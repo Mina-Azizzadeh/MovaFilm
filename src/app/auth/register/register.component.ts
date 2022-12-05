@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AuthRoutes } from '../auth-routes';
 import { AuthServices } from '../services/auth-service';
 import { AuthRegister } from '../../model/auth.model'
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
     this.formGroup = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(8)]),
-      remember: new FormControl(false)
+      // remember: new FormControl(false)
     })
   }
 
@@ -40,8 +41,9 @@ export class RegisterComponent implements OnInit {
     if (this.formGroup.invalid) {
       return
     }
-    let email = this.formGroup.controls['email'].value
-    let password = this.formGroup.controls['password'].value
+
+    const { email, password } = this.formGroup.value
+
     this.isLoading = true
     let authObs: Observable<AuthRegister>;
     if (!this.login) {

@@ -27,12 +27,11 @@
     <div *ngIf="errorPassword" class="error">{{errorPassword}}</div>
 
     <div class="Remember">
-      <input class="form-check-input rememberCheckBox" type="checkbox" id="flexCheckDefault"
+      <!-- <input class="form-check-input rememberCheckBox" type="checkbox" id="flexCheckDefault"
         formControlName="remember" />
-      <span>Remember me</span>
+      <span>Remember me</span> -->
     </div>
-    <button class="sign-in" type="submit" [disabled]="formGroup.invalid">{{ login ? "Sign
-      in" : "Sign up"
+    <button class="sign-in" type="submit" [disabled]="formGroup.invalid">{{ login ? "Signin" : "Sign up"
       }}</button>
   </form>
   <div class="forgot-password" *ngIf="login">Forgot the password?</div>
