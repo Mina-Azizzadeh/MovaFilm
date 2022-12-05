@@ -6,12 +6,13 @@
     <loading-spinner></loading-spinner>
   </div>
   <form [formGroup]="formGroup" (ngSubmit)="onClickSubmit()" *ngIf="!isLoading">
-    <nz-input-group [nzPrefix]="suffixIconSearch" class="input-auth">
+    <mova-input [placeholder]="'Email'" icon="mail" [control]="formGroup.get('email')"></mova-input>
+    <!-- <nz-input-group [nzPrefix]="suffixIconSearch" class="input-auth">
       <input type="text" nz-input placeholder="Email" formControlName="email" />
     </nz-input-group>
     <ng-template #suffixIconSearch>
       <span nz-icon nzType="mail" nzTheme="outline" class="icon-input"></span>
-    </ng-template>
+    </ng-template> -->
     <div *ngIf="error" class="error">{{error}}</div>
     <nz-input-group [nzSuffix]="suffixTemplate" [nzPrefix]="suffixIconpassword" class="input-auth">
       <input [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="Password"

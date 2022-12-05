@@ -1,0 +1,9 @@
+<nz-input-group [nzPrefix]="prefixIconLeft" [nzSuffix]="suffixIconRight" class="input-auth">
+    <input type="text" nz-input [placeholder]="placeholder" [formControl]="control" />
+</nz-input-group>
+<ng-template #prefixIconLeft>
+    <span nz-icon [nzType]="icon" nzTheme="outline" class="icon-input"></span>
+</ng-template>
+<ng-template #suffixIconRight>
+    <span nz-icon [nzType]="icon" nzTheme="outline" class="icon-input"></span>
+</ng-template>

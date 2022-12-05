@@ -12,6 +12,7 @@ import { AuthRegister } from '../../model/auth.model'
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
+  
   public passwordVisible = false;
   public password?: string;
   public login = true;
@@ -19,6 +20,7 @@ export class RegisterComponent implements OnInit {
   public isLoading = false
   public error = ''
   public errorPassword = ''
+  
   constructor(
     private activatedRoute: ActivatedRoute,
     private route: Router,
