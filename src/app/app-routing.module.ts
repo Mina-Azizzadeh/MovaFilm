@@ -8,7 +8,7 @@ const routes: Routes = [
     component: RegistrationComponent,
   },
   {
-    path: 'Home',
+    path: 'home',
     loadChildren: () =>
       import('./pages/pages.routing').then((m) => m.PagesRoutingModule),
   },
