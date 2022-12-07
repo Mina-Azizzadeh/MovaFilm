@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'mova-input',
@@ -8,13 +8,14 @@ import { FormControl } from '@angular/forms';
 })
 export class MovaInputComponent implements OnInit {
 
-  @Input() control!: FormControl;
+  @Input() control!: FormControl | any;
   @Input() placeholder = ''
   @Input() icon = ''
+  @Input() prefix = false
+  @Input() Suffix = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

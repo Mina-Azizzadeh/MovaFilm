@@ -7,26 +7,31 @@ import { MovaInputComponent } from './mova-input/mova-input.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileAvatarComponent } from './profile-avatar/profile-avatar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     MovieAlbumComponent,
     LoadingSpinnerComponent,
-    MovaInputComponent
+    MovaInputComponent,
+    ProfileAvatarComponent
   ],
   exports: [
     NavbarComponent,
     MovieAlbumComponent,
     LoadingSpinnerComponent,
-    MovaInputComponent
+    MovaInputComponent,
+    ProfileAvatarComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     NzInputModule,
     NzIconModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
   ],
 })
 export class ComponentsModule { }

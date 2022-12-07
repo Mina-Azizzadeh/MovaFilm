@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/model/movies-album.model';
 import { MoviesAlbumService } from '../../services/movies-album.service';
 @Component({
-  selector: 'home',
+  selector: 'mova-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

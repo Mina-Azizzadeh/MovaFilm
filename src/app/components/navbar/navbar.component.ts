@@ -1,6 +1,5 @@
 import {
   animate,
-  state,
   style,
   transition,
   trigger,
@@ -18,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
           transform: 'translateY(50px)',
         }),
         animate(
-          500,
+         700,
           style({
             transform: 'translateY(0px)',
           })

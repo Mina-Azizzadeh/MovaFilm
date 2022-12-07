@@ -9,6 +9,6 @@ export class MoviesAlbumService {
   constructor(private http: HttpClient) {}
 
   getMovies() {
-    return this.http.get<Movie[]>('../../assets/filmMock.json');
+    return this.http.get<Movie[]>('../assets/mocks-data/filmMock.json');
   }
 }
