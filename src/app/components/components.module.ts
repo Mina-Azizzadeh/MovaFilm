@@ -9,6 +9,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileAvatarComponent } from './profile-avatar/profile-avatar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,
+    NzDropDownModule
   ],
 })
 export class ComponentsModule { }

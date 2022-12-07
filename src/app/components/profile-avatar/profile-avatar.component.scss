@@ -1,0 +1,50 @@
+.main {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    position: relative;
+
+    .edit-profile {
+        width: 25px;
+        height: 25px;
+        background-color: #E21221;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 7px;
+        right: 2px;
+
+        span {
+            color: white;
+            font-size: 16px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+[nz-menu] {
+    background-color: #E21221;
+}
+
+[nz-menu-item] {
+    color: white;
+    font-size: 12px;
+}
+
+.edit-profile {
+    border-bottom: 1px solid rgb(255, 217, 217);
+}

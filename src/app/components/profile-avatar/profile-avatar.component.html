@@ -1,1 +1,14 @@
-<p>profile-avatar works!</p>
+<div class="main">
+    <div class="profile">
+        <img src="../../../assets/images/download (1).png" alt="">
+        <div class="edit-profile" nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomCenter'">
+            <span nz-icon nzType="edit" nzTheme="outline"></span>
+        </div>
+    </div>
+</div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+        <li nz-menu-item class="edit-profile">Edit Profile</li>
+        <li nz-menu-item>Remove Profile</li>
+    </ul>
+</nz-dropdown-menu>
