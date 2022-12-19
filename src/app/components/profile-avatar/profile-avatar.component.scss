@@ -47,4 +47,16 @@
 
 .edit-profile {
     border-bottom: 1px solid rgb(255, 217, 217);
+    position: relative;
+}
+
+.profile-input::-webkit-file-upload-button {
+    display: none;
+    color: transparent;
+}
+
+.profile-input {
+    color: transparent;
+    position: absolute;
+    top: 0;
 }

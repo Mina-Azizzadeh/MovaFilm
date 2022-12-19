@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileAvatarComponent implements OnInit {
 
+  public image = ''
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  
+  onEdit() {
+  }
 
+  onChangeProfile(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+
+      const reader = new FileReader();
+      reader.onload = () => this.image = String(reader.result);
+
+      reader.readAsDataURL(file);
+    }
+  }
 }
