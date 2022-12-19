@@ -1,6 +1,6 @@
 <div class="main">
     <div class="profile">
-        <img [src]="image.length < 1 ? '../../../assets/images/download (1).png' : image" alt="">
+        <img [src]="profileImage.length < 1 ? '../../../assets/images/download (1).png' : profileImage" alt="">
         <div class="edit-profile" nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomCenter'">
             <span nz-icon nzType="edit" nzTheme="outline"></span>
         </div>
@@ -8,9 +8,9 @@
 </div>
 <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu>
-        <li nz-menu-item class="edit-profile" (click)="onEdit()">Edit Profile
+        <li nz-menu-item class="edit-profile">Edit Profile
             <input class="profile-input" type="file" (change)="onChangeProfile($event)" accept="image/*">
         </li>
-        <li nz-menu-item (click)="image = ''">Remove Profile</li>
+        <li nz-menu-item (click)="profileImage = ''">Remove Profile</li>
     </ul>
 </nz-dropdown-menu>
