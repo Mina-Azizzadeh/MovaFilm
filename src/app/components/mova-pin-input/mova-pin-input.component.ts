@@ -20,4 +20,8 @@ export class MovaPinInputComponent implements OnInit {
       console.log(otpValue)
     }
   }
+
+  onClick(e: any) {
+    console.log(e)
+  }
 }
