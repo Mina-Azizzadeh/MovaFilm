@@ -47,7 +47,8 @@ export class RegisterComponent implements OnInit {
     }
 
     const { email, password } = this.formGroup.value
-
+    console.log(email, password)
+    
     this.isLoading = true
     let authObs: Observable<AuthRegister>;
     if (!this.login) {

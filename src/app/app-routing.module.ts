@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './auth/registration.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: RegistrationComponent,
+  // },
   {
     path: '',
-    component: RegistrationComponent,
-  },
-  {
-    path: 'home',
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
