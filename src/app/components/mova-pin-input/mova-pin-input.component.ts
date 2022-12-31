@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-mova-pin-input',
@@ -6,22 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mova-pin-input.component.scss']
 })
 export class MovaPinInputComponent implements OnInit {
+  @Input() times: number = 4
+  repeatTag: any[] = []
+  public form = new FormGroup({});
 
-
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.indexOfInput()
+    this.repeatTag.forEach(i => {
+      this.form?.addControl(i.toString(), new FormControl(''));
+    });
   }
 
-  onkeyup(event: KeyboardEvent) {
-    const otpValue = +event.key
-    if (!Number.isNaN(otpValue)) {
-      console.log('isNumber')
-      console.log(otpValue)
+  indexOfInput() {
+    for (let i = 0; i < this.times; i++) {
+      this.repeatTag.push(i)
     }
   }
 
-  onClick(e: any) {
-    console.log(e)
+  onClick(event: any, i: number) {
+    let keysToCheck = 'Tab'.split(';');
+    console.log(keysToCheck.some(k => k === event.key))
+    return keysToCheck.some(k => k === event.key);
+
+  }
+
+  onSubmit() {
+    console.log(this.form.value)
   }
 }

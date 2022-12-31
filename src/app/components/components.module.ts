@@ -16,6 +16,7 @@ import { MovaInputComponent } from './mova-input/mova-input.component';
 import { ProfileAvatarComponent } from './profile-avatar/profile-avatar.component';
 import { MovaPinInputComponent } from './mova-pin-input/mova-pin-input.component';
 import { DirectivesModule } from '../directives/directives.module';
+import { MovaLikeHeartComponent } from './mova-like-heart/mova-like-heart.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { DirectivesModule } from '../directives/directives.module';
     MovaInputComponent,
     ProfileAvatarComponent,
     MovaPinInputComponent,
+    MovaLikeHeartComponent,
   ],
   exports: [
     NavbarComponent,

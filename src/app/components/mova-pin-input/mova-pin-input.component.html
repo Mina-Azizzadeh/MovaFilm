@@ -1,3 +1,4 @@
-<div class="main">
-    <input type="number" *repeatTag="4" class="pin-input" (keyup)="onkeyup($event)" (keydown)="onClick($event)">
-</div>
+<form class="main" [formGroup]="form">
+    <input type="number" *ngFor="let item of repeatTag" class="pin-input" [formControlName]="item">
+</form>
+<button type="submit" (click)="onSubmit()">submit</button>
