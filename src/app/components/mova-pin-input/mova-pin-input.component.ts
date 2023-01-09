@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, PatternValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-mova-pin-input',
@@ -7,7 +7,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./mova-pin-input.component.scss']
 })
 export class MovaPinInputComponent implements OnInit {
-  @Input() times: number = 4
+  @Input() times: number = 10
   repeatTag: any[] = []
   public form = new FormGroup({});
 
@@ -35,5 +35,7 @@ export class MovaPinInputComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form.value)
+   
+    
   }
 }

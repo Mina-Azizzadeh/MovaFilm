@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let num of list"
+      (click)="changeValue(num)" [style.background-color]="num === value ? 'yellow' : 'white'">
+      {{ num }}
+    </li>
+  </ul>

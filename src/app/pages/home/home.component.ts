@@ -8,6 +8,7 @@ import { MoviesAlbumService } from '../../services/movies-album.service';
 })
 export class HomeComponent implements OnInit {
   public movies!: Movie[];
+  num: number = 2;
   constructor(private moviesService: MoviesAlbumService) {}
 
   ngOnInit(): void {
