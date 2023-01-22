@@ -17,6 +17,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NzSelectModule,
     NzUploadModule,
     NzModalModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NzGridModule
   ],
   exports: [],
 })
-export class RegistrationModule {}
+export class RegistrationModule { }

@@ -35,7 +35,7 @@
     <button class="sign-in" type="submit" [disabled]="formGroup.invalid">{{ login ? "Signin" : "Sign up"
       }}</button>
   </form>
-  <div class="forgot-password" *ngIf="login">Forgot the password?</div>
+  <div class="forgot-password" *ngIf="login" routerLink="/auth/forgot-password">Forgot the password?</div>
   <div class="continue-with">or continue with</div>
   <div class="icon-app">
     <span class="icon"> <i class="fa fa-facebook-f"></i> </span>

@@ -3,5 +3,6 @@ export enum AuthRoutes {
     Login = 'login',
     Register = 'register',
     AccountSetup = 'account-setup',
-    Profile = 'profile'
+    Profile = 'profile',
+    forgotPassword = 'forgot-password'
   }
