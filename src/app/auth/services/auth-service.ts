@@ -1,18 +1,24 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, tap, throwError } from 'rxjs';
 import { AuthRegister } from '../../model/auth.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthServices {
+  public isLoggin$ = new BehaviorSubject<boolean>(false)
+
   constructor(private http: HttpClient) { }
 
   signup(email: string, password: string) {
     return this.http.post<AuthRegister>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDc9c9vRpjCW8zfG5SVmRQjK8lB_L0nuMQ', {
       email, password, returnSecureToken: true
-    }).pipe(
+    }
+    ).pipe(
+      tap(() => {
+        return this.isLoggin$.next(true);
+      }),
       catchError(this.handleError)
     )
   }
@@ -21,13 +27,15 @@ export class AuthServices {
     return this.http.post<AuthRegister>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDc9c9vRpjCW8zfG5SVmRQjK8lB_L0nuMQ', {
       email, password, returnSecureToken: true
     }).pipe(
-      catchError(this.handleError)
+      tap(() => {
+        this.isLoggin$.next(true);
+      }),
+      catchError(this.handleError),
     )
   }
 
   private handleError(errorRes: HttpErrorResponse) {
     let errorMessage = 'An unkhow error occurred!'
-
     if (!errorRes.error || !errorRes.error.error) {
       return throwError(errorMessage);
     }
@@ -54,3 +62,5 @@ export class AuthServices {
     return throwError(errorMessage)
   }
 }
+
+

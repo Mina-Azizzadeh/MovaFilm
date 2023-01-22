@@ -36,11 +36,6 @@ export class ControlValueAccessorComponent implements ControlValueAccessor {
     this.fnTouched = fn;
   }
 
-
-  setDisabledState(isDisabled: boolean): void {
-
-  }
-
   changeValue(num: number): void {
     this.value = num;
     this.fnChange(num);
