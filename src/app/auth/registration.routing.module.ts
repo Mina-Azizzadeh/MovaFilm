@@ -5,6 +5,7 @@ import { ProfileComponent } from './account-setup/profile/profile.component';
 import { AuthRoutes } from './auth-routes';
 import { EntrancePermissionComponent } from './entrance-permission/entrance-permission.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { NewPasswordComponent } from './forgot-password/new-password/new-password.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: `${AuthRoutes.AccountSetup}`, component: AccountSetupComponent },
   { path: `${AuthRoutes.AccountSetup}/${AuthRoutes.Profile}`, component: ProfileComponent },
   { path: `${AuthRoutes.forgotPassword}`, component: ForgotPasswordComponent },
+  { path: `${AuthRoutes.newpassword}`, component: NewPasswordComponent },
   { path: `:${AuthRoutes.RegisterationState}`, component: RegisterComponent },
 ];
 

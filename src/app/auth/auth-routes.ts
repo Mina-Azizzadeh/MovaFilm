@@ -4,5 +4,6 @@ export enum AuthRoutes {
     Register = 'register',
     AccountSetup = 'account-setup',
     Profile = 'profile',
-    forgotPassword = 'forgot-password'
+    forgotPassword = 'forgot-password',
+    newpassword = 'creat-new-password'
   }

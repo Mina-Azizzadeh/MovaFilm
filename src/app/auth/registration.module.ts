@@ -15,9 +15,12 @@ import { AccountSetupComponent } from './account-setup/account-setup.component';
 import { ProfileComponent } from './account-setup/profile/profile.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
-import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NgxOtpInputModule } from 'ngx-otp-input';
+import { NewPasswordComponent } from './forgot-password/new-password/new-password.component';
+import { SuccessModalComponent } from './forgot-password/success-modal/success-modal.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     RegisterComponent,
     AccountSetupComponent,
     ProfileComponent,
+    NewPasswordComponent,
+    SuccessModalComponent
   ],
   imports: [
     RegistrationRoutingModule,
@@ -41,8 +46,11 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
     NzUploadModule,
     NzModalModule,
     FontAwesomeModule,
-    NzGridModule
+    NzGridModule,
+    NgxOtpInputModule,
+
   ],
   exports: [],
+  providers:[NzModalService]
 })
 export class RegistrationModule { }
