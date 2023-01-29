@@ -13,6 +13,5 @@ export class MovieAlbumComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.movies)
-
   }
 }

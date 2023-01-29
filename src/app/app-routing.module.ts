@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'mova',
-    canLoad:[AuthLoadGuard],
+    // canLoad:[AuthLoadGuard],
     // canActivate: [AuthGuard],
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),

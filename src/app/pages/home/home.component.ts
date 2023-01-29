@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
   constructor(private moviesService: MoviesAlbumService) {}
 
   ngOnInit(): void {
-    // this.moviesService.getMovies().subscribe((res) => {
-    //   this.movies = res;
-    // });
+    this.moviesService.getMovies().subscribe((res) => {
+      this.movies = res;
+    });
   }
 }
