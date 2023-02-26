@@ -1,0 +1,30 @@
+<div>
+    <div class="header-carousel">
+        <div></div>
+        <div>
+            <span nz-icon nzType="search" nzTheme="outline" style="margin-right:0.8rem;"></span>
+            <span nz-icon nzType="bell" nzTheme="outline"></span>
+        </div>
+    </div>
+    <nz-carousel nzAutoPlay [nzAutoPlaySpeed]="7000" [nzDots]="false">
+        <ng-container *ngFor="let movie of movies">
+            <div nz-carousel-content>
+                <img [src]="movie.imageCover" width="100%">
+                <div class="discription-movie">
+                    <div class="title">{{movie.name}}</div>
+                    <div class="discreption">{{movie.discreption}}</div>
+                    <div style="display:flex;">
+                        <button style="margin-right:0.8rem;" class="play">
+                            <span nz-icon nzType="play-circle" nzTheme="fill"></span>
+                            <span>Play</span>
+                        </button>
+                        <button class="my-list">
+                            <span nz-icon nzType="plus" nzTheme="outline"></span>
+                            <span>My List</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </nz-carousel>
+</div>

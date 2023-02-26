@@ -54,7 +54,7 @@ export class NavbarComponent implements OnInit {
     {
       title: 'Download',
       icon: 'import',
-      routerLink: './',     
+      routerLink: './',
     },
     {
       title: 'Profile',
@@ -71,7 +71,6 @@ export class NavbarComponent implements OnInit {
     console.log(navItem)
   }
 
-  onRouterLinkActive(e:any){
-console.log(e)
+  onRouterLinkActive(e: any) {
   }
 }
