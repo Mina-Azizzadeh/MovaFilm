@@ -1,27 +1,10 @@
 <div class="navbar" @fromTheBottom>
-  <div routerLinkActive="active" class="item-nav" routerLink="'/'" >
-    <!-- <i class="fa-solid fa-house"></i> -->
-    <span nz-icon nzType="home" nzTheme="outline"></span>
-    <div>Home</div>
-  </div>
-  <div routerLinkActive="active" class="item-nav">
-    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-    <span nz-icon nzType="compass" nzTheme="outline"></span>
-    <div>Explore</div>
-  </div>
-  <div routerLinkActive="active" class="item-nav">
-    <!-- <i class="fa-solid fa-list"></i> -->
-    <span nz-icon nzType="inbox" nzTheme="outline"></span>
-    <div>My List</div>
-  </div>
-  <div routerLinkActive="active" class="item-nav">
-    <!-- <i class="fas fa-download"></i> -->
-    <span nz-icon nzType="import" nzTheme="outline" class="download"></span>
-    <div>Download</div>
-  </div>
-  <div routerLinkActive="active" class="item-nav">
-    <!-- <i class="fa-solid fa-user"></i> -->
-    <span nz-icon nzType="user" nzTheme="outline"></span>
-    <div>Profile</div>
-  </div>
+  <ng-container *ngFor="let item of navOption">
+    <div [routerLink]="[item.routerLink]" routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: true }"
+      (isActiveChange)="onRouterLinkActive($event)" (click)="onClickNav(item)">
+      <span nz-icon [nzType]="item.icon" nzTheme="outline"></span>
+      <div>{{item.title}}</div>
+    </div>
+  </ng-container>
 </div>

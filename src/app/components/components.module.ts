@@ -7,8 +7,6 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { NavbarComponent } from './navbar/navbar.component';
 import { MovieAlbumComponent } from './movie-album/movie-album.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
@@ -17,6 +15,8 @@ import { ProfileAvatarComponent } from './profile-avatar/profile-avatar.componen
 import { MovaPinInputComponent } from './mova-pin-input/mova-pin-input.component';
 import { DirectivesModule } from '../directives/directives.module';
 import { MovaLikeHeartComponent } from './mova-like-heart/mova-like-heart.component';
+import { RouterModule } from '@angular/router';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 @NgModule({
   declarations: [
@@ -42,10 +42,11 @@ import { MovaLikeHeartComponent } from './mova-like-heart/mova-like-heart.compon
     NzIconModule,
     ReactiveFormsModule,
     FormsModule,
-    FontAwesomeModule,
     NzDropDownModule,
     NzGridModule,
-    DirectivesModule
+    DirectivesModule,
+    RouterModule,
+    NzTabsModule,
   ],
 })
 export class ComponentsModule { }

@@ -6,6 +6,12 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
+interface NavOption {
+  title: string,
+  icon: string,
+  routerLink: string | null,
+}
+
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
@@ -17,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
           transform: 'translateY(50px)',
         }),
         animate(
-         700,
+          700,
           style({
             transform: 'translateY(0px)',
           })
@@ -26,8 +32,46 @@ import { Component, OnInit } from '@angular/core';
     ]),
   ],
 })
-export class NavbarComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+export class NavbarComponent implements OnInit {
+  public current = 0
+  public navOption: NavOption[] = [
+    {
+      title: 'Home',
+      icon: 'home',
+      routerLink: './',
+    },
+    {
+      title: 'Explore',
+      icon: 'compass',
+      routerLink: './',
+    },
+    {
+      title: 'My List',
+      icon: 'inbox',
+      routerLink: './',
+    },
+    {
+      title: 'Download',
+      icon: 'import',
+      routerLink: './',     
+    },
+    {
+      title: 'Profile',
+      icon: 'user',
+      routerLink: './',
+    }
+  ]
+
+  constructor() { }
+
+  ngOnInit(): void { }
+
+  onClickNav(navItem: NavOption) {
+    console.log(navItem)
+  }
+
+  onRouterLinkActive(e:any){
+console.log(e)
+  }
 }

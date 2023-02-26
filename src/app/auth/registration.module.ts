@@ -16,7 +16,6 @@ import { ProfileComponent } from './account-setup/profile/profile.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NgxOtpInputModule } from 'ngx-otp-input';
 import { NewPasswordComponent } from './forgot-password/new-password/new-password.component';
@@ -45,7 +44,6 @@ import { SuccessModalComponent } from './forgot-password/success-modal/success-m
     NzSelectModule,
     NzUploadModule,
     NzModalModule,
-    FontAwesomeModule,
     NzGridModule,
     NgxOtpInputModule,
 
