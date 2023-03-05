@@ -14,11 +14,11 @@
                     <div class="title">{{movie.name}}</div>
                     <div class="discreption">{{movie.discreption}}</div>
                     <div style="display:flex;">
-                        <button style="margin-right:0.8rem;" class="play">
+                        <button style="margin-right:0.8rem;" class="play" (click)="onPlay(movie)">
                             <span nz-icon nzType="play-circle" nzTheme="fill"></span>
                             <span>Play</span>
                         </button>
-                        <button class="my-list">
+                        <button class="my-list" (click)="onClickMyList(movie)">
                             <span nz-icon nzType="plus" nzTheme="outline"></span>
                             <span>My List</span>
                         </button>

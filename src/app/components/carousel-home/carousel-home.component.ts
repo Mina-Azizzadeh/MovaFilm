@@ -13,5 +13,11 @@ export class CarouselHomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onPlay(movie: Movie) {
+    console.log(movie)
+  }
 
+  onClickMyList(movie: Movie) {
+    console.log(movie)
+  }
 }
