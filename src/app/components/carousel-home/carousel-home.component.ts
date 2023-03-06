@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/model/movies-album.model';
+import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 
 @Component({
   selector: 'mova-carousel-home',
@@ -7,12 +8,15 @@ import { Movie } from 'src/app/model/movies-album.model';
   styleUrls: ['./carousel-home.component.scss']
 })
 export class CarouselHomeComponent implements OnInit {
-  @Input() movies: Movie[] = []
-
-  constructor() { }
+  listOfMovie: Movie[] = []
+  constructor(private movieService: MoviesAlbumService) { }
 
   ngOnInit(): void {
+    this.movieService.getCarouselData().subscribe((res) => {
+      this.listOfMovie = res
+    })
   }
+
   onPlay(movie: Movie) {
     console.log(movie)
   }

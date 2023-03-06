@@ -4,3 +4,9 @@ export interface Movie {
   rate: number;
   discreption: string;
 }
+
+export interface CategoryOfFilm {
+  id: number,
+  title: string,
+  films: Movie[]
+}

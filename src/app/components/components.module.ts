@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { CarouselHomeComponent } from './carousel-home/carousel-home.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { MoviesListComponent } from './movies-list/movies-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
     MovaPinInputComponent,
     MovaLikeHeartComponent,
     CarouselHomeComponent,
+    MoviesListComponent,
   ],
   exports: [
     NavbarComponent,
@@ -38,7 +40,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
     MovaInputComponent,
     ProfileAvatarComponent,
     MovaPinInputComponent,
-    CarouselHomeComponent
+    CarouselHomeComponent,
+    MoviesListComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +54,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
     DirectivesModule,
     RouterModule,
     NzTabsModule,
-    NzCarouselModule
+    NzCarouselModule,
+    RouterModule
   ],
 })
 export class ComponentsModule { }

@@ -1,16 +1,18 @@
-<div class="main">
-  <div class="d-flex justify-content-between pb-3">
-    <div class="title">{{ title }}</div>
-    <div class="seeAll text-danger">See all</div>
-  </div>
-  <div class="album">
-    <div class="img-scroll">
-      <ng-container *ngFor="let movie of movies">
-        <div class="cover-movie">
-          <img [src]="movie.imageCover" />
-          <div class="rate-badge">{{movie.rate}}</div>
-        </div>
-      </ng-container>
+<ng-container *ngFor="let movieCategory of listOfMovie">
+  <div class="main">
+    <div class="d-flex justify-content-between pb-3">
+      <div class="title">{{ movieCategory.title }}</div>
+      <div class="seeAll text-danger" (click)="onShowMore(movieCategory)">See all</div>
+    </div>
+    <div class="album">
+      <div class="img-scroll">
+        <ng-container *ngFor="let movie of movieCategory.films">
+          <div class="cover-movie">
+            <img [src]="movie.imageCover" />
+            <div class="rate-badge">{{movie.rate}}</div>
+          </div>
+        </ng-container>
+      </div>
     </div>
   </div>
-</div>
+</ng-container>

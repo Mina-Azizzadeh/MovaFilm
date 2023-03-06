@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from 'src/app/model/movies-album.model';
+import { Route, Router } from '@angular/router';
+import { CategoryOfFilm, Movie } from 'src/app/model/movies-album.model';
+import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 
 @Component({
   selector: 'movie-album',
@@ -7,11 +9,15 @@ import { Movie } from 'src/app/model/movies-album.model';
   styleUrls: ['./movie-album.component.scss'],
 })
 export class MovieAlbumComponent implements OnInit {
-  @Input() title: string = '';
-  @Input() movies!: Movie[] ;
-  constructor( ) {}
+  @Input() listOfMovie: CategoryOfFilm[] = [];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.movies)
+  }
+
+  onShowMore(moviesCategory: any) {
+    console.log(moviesCategory)
+    this.router.navigate(['mova', moviesCategory.title, moviesCategory.id])
   }
 }
