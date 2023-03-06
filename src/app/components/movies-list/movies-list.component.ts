@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { map, tap } from 'rxjs';
+import { CategoryOfFilm } from 'src/app/model/movies-album.model';
 import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { MoviesAlbumService } from 'src/app/services/movies-album.service';
   styleUrls: ['./movies-list.component.scss']
 })
 export class MoviesListComponent implements OnInit {
-
+  public movies!: CategoryOfFilm;
   constructor(
     private activeRoute: ActivatedRoute,
     private moviesService: MoviesAlbumService) { }
@@ -19,6 +21,15 @@ export class MoviesListComponent implements OnInit {
 
   getMoviesList() {
     const idActivetedRoute = this.activeRoute.snapshot.params['id']
-    // const listOfMovies = this.moviesService.getlistOfMovie()
+    this.moviesService.getMovies().pipe(
+      map((result) => {
+        return result.find((result) => result.id == idActivetedRoute)
+      }),
+    ).subscribe((result) => {
+      if (result == undefined) {
+        return
+      }
+      this.movies = result
+    })
   }
 }
