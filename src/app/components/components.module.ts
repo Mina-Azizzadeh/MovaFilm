@@ -20,6 +20,7 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { CarouselHomeComponent } from './carousel-home/carousel-home.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { MoviesListComponent } from './movies-list/movies-list.component';
+import { MovieItemsComponent } from './movie-items/movie-items.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
     MovaLikeHeartComponent,
     CarouselHomeComponent,
     MoviesListComponent,
+    MovieItemsComponent,
   ],
   exports: [
     NavbarComponent,
@@ -41,7 +43,8 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
     ProfileAvatarComponent,
     MovaPinInputComponent,
     CarouselHomeComponent,
-    MoviesListComponent
+    MoviesListComponent,
+    MovieItemsComponent,
   ],
   imports: [
     CommonModule,

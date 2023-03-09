@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, tap } from 'rxjs';
+import { map } from 'rxjs';
 import { CategoryOfFilm } from 'src/app/model/movies-album.model';
 import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 

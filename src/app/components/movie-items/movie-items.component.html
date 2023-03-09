@@ -1,0 +1,10 @@
+<div class="main" nz-row>
+    <ng-container *ngFor="let item of movies">
+        <div class="container-cover">
+            <div class="cover-movie">
+                <img [src]="item.imageCover" />
+                <div class="rate-badge">{{item.rate}}</div>
+            </div>
+        </div>
+    </ng-container>
+</div>
