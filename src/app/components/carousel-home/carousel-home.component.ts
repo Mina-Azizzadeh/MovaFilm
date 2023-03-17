@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/model/movies-album.model';
 import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 
@@ -9,7 +10,7 @@ import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 })
 export class CarouselHomeComponent implements OnInit {
   listOfMovie: Movie[] = []
-  constructor(private movieService: MoviesAlbumService) { }
+  constructor(private movieService: MoviesAlbumService, private router: Router) { }
 
   ngOnInit(): void {
     this.movieService.getCarouselData().subscribe((res) => {
@@ -23,5 +24,9 @@ export class CarouselHomeComponent implements OnInit {
 
   onClickMyList(movie: Movie) {
     console.log(movie)
+  }
+
+  onNotification() {
+    this.router.navigateByUrl('/mova/notification')
   }
 }
