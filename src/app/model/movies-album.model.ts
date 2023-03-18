@@ -10,3 +10,11 @@ export interface CategoryOfFilm {
   title: string,
   films: Movie[]
 }
+
+export interface Notification {
+  title: string,
+  url: string,
+  episode: string,
+  date: string,
+  action: string
+}

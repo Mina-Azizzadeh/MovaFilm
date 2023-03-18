@@ -9,7 +9,9 @@
     <nz-carousel nzAutoPlay [nzAutoPlaySpeed]="7000" [nzDots]="false">
         <ng-container *ngFor="let movie of listOfMovie">
             <div nz-carousel-content>
-                <img [src]="movie.imageCover" width="100%">
+                <div>
+                    <img [src]="movie.imageCover" width="100%" height="100%">
+                </div>
                 <div class="discription-movie">
                     <div class="title">{{movie.name}}</div>
                     <div class="discreption">{{movie.discreption}}</div>

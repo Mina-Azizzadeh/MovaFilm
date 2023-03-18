@@ -17,3 +17,30 @@
 .search {
     font-size: 1.5rem;
 }
+
+.notifications {
+    margin-top: 2rem;
+}
+
+.containter-img img {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.containter-img {
+    width: 10rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play {
+    color: white;
+    position: absolute;
+    font-size: 1.2rem;
+}

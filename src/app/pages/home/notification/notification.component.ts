@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Notification } from 'src/app/model/movies-album.model';
+import { MoviesAlbumService } from 'src/app/services/movies-album.service';
 
 @Component({
   selector: 'app-notification',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent implements OnInit {
-
-  constructor() { }
+  public notifications: Notification[] = []
+  constructor(private notifService: MoviesAlbumService) { }
 
   ngOnInit(): void {
+    this.getNotifications()
   }
 
+  getNotifications() {
+    this.notifService.getNotificationData().subscribe(
+      (result) => {
+        this.notifications = result
+      })
+  }
 }

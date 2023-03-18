@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PagesRoutingModule } from './pages.routing';
 import { NotificationComponent } from './home/notification/notification.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     FormsModule,
     RouterModule,
     NzIconModule,
+    NzGridModule
   ],
   exports: [],
 })

@@ -1,26 +1,5 @@
 [
     {
-        "title": "Stranger Things",
-        "url": "assets/films-cover/download.jpg",
-        "episode": "07",
-        "date": "12/02/2023",
-        "action": "Update"
-    },
-    {
-        "title": "Good Doctor Sea",
-        "url": "assets/films-cover/images.jpg",
-        "episode": "",
-        "date": "12/02/2023",
-        "action": "Update"
-    },
-    {
-        "title": "Avatar 2",
-        "url": "assets/films-cover/large_moon-poster.jpg",
-        "episode": "08",
-        "date": "12/02/2023",
-        "action": "New Release"
-    },
-    {
         "title": "The witcher 3",
         "url": "assets/films-cover/MV5BMTMzOTY1MTg2NV5BMl5BanBnXkFtZTcwMzEzODg5Mg@@._V1_FMjpg_UX1000_.jpg",
         "episode": "10",
@@ -45,6 +24,27 @@
         "title": "Test 2",
         "url": "assets/films-cover/The_Silence_2019_film_poster.jpg",
         "episode": "5",
+        "date": "12/02/2023",
+        "action": "New Release"
+    },
+    {
+        "title": "Stranger Things",
+        "url": "assets/films-cover/download.jpg",
+        "episode": "07",
+        "date": "12/02/2023",
+        "action": "Update"
+    },
+    {
+        "title": "Good Doctor Sea",
+        "url": "assets/films-cover/images.jpg",
+        "episode": "",
+        "date": "12/02/2023",
+        "action": "Update"
+    },
+    {
+        "title": "Avatar 2",
+        "url": "assets/films-cover/large_moon-poster.jpg",
+        "episode": "08",
         "date": "12/02/2023",
         "action": "New Release"
     },
