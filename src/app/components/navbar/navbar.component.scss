@@ -33,6 +33,12 @@
   }
 
 }
+
 .active {
-  color: red;
+  div {
+    color: #E21021 !important;
+  }
+
+  color: #E21021 !important;
+  font-weight: 600;
 }

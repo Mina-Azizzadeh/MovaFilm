@@ -1,24 +1,29 @@
-
-
 .fa-google {
-    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg)
-        73% 55%/150% 150% no-repeat;
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-facebook-f {
     color: #0e88e2;
 }
+
 body {
     height: 100vh;
 }
-.error { 
+
+.error {
     color: #E21021;
     text-align: left;
     font-size: 12px;
     padding: 2%;
     width: 95%;
     margin: 0 auto;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
 }

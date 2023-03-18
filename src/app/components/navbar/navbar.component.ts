@@ -34,7 +34,6 @@ interface NavOption {
 })
 
 export class NavbarComponent implements OnInit {
-  public current = 0
   public navOption: NavOption[] = [
     {
       title: 'Home',
@@ -49,17 +48,17 @@ export class NavbarComponent implements OnInit {
     {
       title: 'My List',
       icon: 'inbox',
-      routerLink: './',
+      routerLink: '/',
     },
     {
       title: 'Download',
       icon: 'import',
-      routerLink: './',
+      routerLink: '/',
     },
     {
       title: 'Profile',
       icon: 'user',
-      routerLink: './',
+      routerLink: '/',
     }
   ]
 
