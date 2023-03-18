@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 import { CategoryOfFilm } from 'src/app/model/movies-album.model';
 import { MoviesAlbumService } from 'src/app/services/movies-album.service';
@@ -13,7 +13,8 @@ export class MoviesListComponent implements OnInit {
   public movies!: CategoryOfFilm;
   constructor(
     private activeRoute: ActivatedRoute,
-    private moviesService: MoviesAlbumService) { }
+    private moviesService: MoviesAlbumService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getMoviesList()
@@ -31,5 +32,9 @@ export class MoviesListComponent implements OnInit {
       }
       this.movies = result
     })
+  }
+
+  onClickSearch() {
+    this.router.navigateByUrl('/mova/explore')
   }
 }

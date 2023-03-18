@@ -29,4 +29,8 @@ export class CarouselHomeComponent implements OnInit {
   onNotification() {
     this.router.navigateByUrl('/mova/notification')
   }
+
+  onClickSearch(){
+    this.router.navigateByUrl('/mova/explore')
+  }
 }

@@ -9,12 +9,16 @@ import { PagesRoutingModule } from './pages.routing';
 import { NotificationComponent } from './home/notification/notification.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { ExploreComponent } from './explore/explore.component';
+import { PagesComponent } from './pages.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ControlValueAccessorComponent,
-    NotificationComponent
+    NotificationComponent,
+    ExploreComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,

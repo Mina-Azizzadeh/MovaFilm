@@ -44,7 +44,7 @@ export class NavbarComponent implements OnInit {
     {
       title: 'Explore',
       icon: 'compass',
-      routerLink: './',
+      routerLink: './explore',
     },
     {
       title: 'My List',
