@@ -16,7 +16,8 @@ export class NotificationComponent implements OnInit {
   }
 
   getNotifications() {
-    this.notifService.getNotificationData().subscribe(
+    this.notifService.getNotificationData().pipe(
+    ).subscribe(
       (result) => {
         this.notifications = result
       })

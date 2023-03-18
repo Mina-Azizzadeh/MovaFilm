@@ -5,17 +5,20 @@
     </div>
     <div class="notifications">
         <ng-container *ngFor="let notif of notifications">
-            <div nz-row>
-                <div nz-col class="containter-img">
-                    <span nz-icon nzType="play-circle" nzTheme="fill" class="play"></span>
-                    <img [src]="notif.url"></div>
-                <div nz-col>
-                    <!-- <div>
-                        <div>{{notif.title}}</div>
-                        <div>{{notif.episode}}</div>
-                        <div> {{notif.action}}</div>
+            <div class="notif">
+                <div>
+                    <div class="containter-img">
+                        <span nz-icon nzType="play-circle" nzTheme="fill" class="play"></span>
+                        <img [src]="notif.url">
                     </div>
-                    <div>{{notif.date}}</div> -->
+                </div>
+                <div class="detail-notif">
+                    <div>
+                        <div class="title-notif">{{notif.title}}</div>
+                        <div *ngIf="notif.episode.length > 1" class="episode">{{notif.episode}} Episode</div>
+                        <div class="notif-action"> <span> {{notif.action}}</span></div>
+                    </div>
+                    <div class="date">{{notif.date}}</div>
                 </div>
             </div>
         </ng-container>
