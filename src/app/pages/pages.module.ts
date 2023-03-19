@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 import { ControlValueAccessorComponent } from '../control-value-accessor/control-value-accessor.component';
@@ -11,6 +11,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { ExploreComponent } from './explore/explore.component';
 import { PagesComponent } from './pages.component';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { PagesComponent } from './pages.component';
     FormsModule,
     RouterModule,
     NzIconModule,
-    NzGridModule
+    NzGridModule,
+    NzInputModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [],
 })

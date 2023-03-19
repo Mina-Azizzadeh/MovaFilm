@@ -1,0 +1,38 @@
+nz-input-group {
+    height: 2.7rem;
+    padding: 0 1rem;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 0.8rem;
+
+    input {
+        background-color: #F5F5F5;
+    }
+}
+
+.search {
+    color: #C0C0C0;
+    padding-right: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.swap {
+    color: #E21021;
+    background-color: #FDECEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 0.8rem;
+
+    span {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}

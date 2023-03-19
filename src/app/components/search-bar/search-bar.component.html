@@ -1,0 +1,14 @@
+<div class="header">
+    <div style="width: 90%; margin-right: 0.7rem;">
+        <nz-input-group [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input placeholder="Search" />
+        </nz-input-group>
+        <ng-template #prefixTemplateUser>
+            <span nz-icon nzType="search" nzTheme="outline" class="search">
+            </span>
+        </ng-template>
+    </div>
+    <div class="swap">
+        <span nz-icon nzType="swap" nzTheme="outline"></span>
+    </div>
+</div>
