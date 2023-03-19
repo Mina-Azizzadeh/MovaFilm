@@ -5,10 +5,10 @@ import { AuthLoadGuard } from './auth/services/auth-load.guard';
 import { AuthGuard } from './auth/services/auth.guard';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: RegistrationComponent,
-  },
+  // {
+  //   path: '',
+  //   component: RegistrationComponent,
+  // },
   {
     path: 'mova',
     // canLoad:[AuthLoadGuard],
@@ -16,6 +16,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule),
   },
+  { path: '', redirectTo: 'mova', pathMatch: 'prefix' },
   {
     path: 'auth',
     loadChildren: () =>
