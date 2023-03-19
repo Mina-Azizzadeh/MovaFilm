@@ -62,6 +62,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     NzTabsModule,
     NzCarouselModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
 })
