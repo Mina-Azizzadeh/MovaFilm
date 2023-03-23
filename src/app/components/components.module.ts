@@ -9,6 +9,8 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { MovieAlbumComponent } from './movie-album/movie-album.component';
@@ -22,6 +24,7 @@ import { CarouselHomeComponent } from './carousel-home/carousel-home.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MovieItemsComponent } from './movie-items/movie-items.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FilterModalComponent } from './filter-modal/filter-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     MoviesListComponent,
     MovieItemsComponent,
     SearchBarComponent,
+    FilterModalComponent,
   ],
   exports: [
     NavbarComponent,
@@ -63,8 +67,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     NzCarouselModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    NzModalModule,
+    NzButtonModule
   ],
 })
 export class ComponentsModule { }

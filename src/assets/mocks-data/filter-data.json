@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "title": "Categories",
+        "items": [
+            {
+                "id": 1001,
+                "name": "Movie"
+            },
+            {
+                "id": 1002,
+                "name": "Tv Shows"
+            },
+            {
+                "id": 1003,
+                "name": "K-Drama"
+            },
+            {
+                "id": 1004,
+                "name": "Anime"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Regions",
+        "items": [
+            {
+                "id": 2001,
+                "name": "All Regions"
+            },
+            {
+                "id": 2002,
+                "name": "Us"
+            },
+            {
+                "id": 2003,
+                "name": "South Korea"
+            },
+            {
+                "id": 2004,
+                "name": "China"
+            },
+            {
+                "id": 2005,
+                "name": "japenes"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Genre",
+        "items": [
+            {
+                "id": 3001,
+                "name": "Action"
+            },
+            {
+                "id": 3002,
+                "name": "Comedy"
+            },
+            {
+                "id": 3003,
+                "name": "Drama"
+            },
+            {
+                "id": 3004,
+                "name": "Romance"
+            },
+            {
+                "id": 3005,
+                "name": "Horor"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Time/Periods",
+        "items": [
+            {
+                "id": 4001,
+                "name": "All periods"
+            },
+            {
+                "id": 4002,
+                "name": 2023
+            },
+            {
+                "id": 4003,
+                "name": 2022
+            },
+            {
+                "id": 4004,
+                "name": 2021
+            },
+            {
+                "id": 4005,
+                "name": 2020
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Sort",
+        "items": [
+            {
+                "id": 5001,
+                "name": "Popularity"
+            },
+            {
+                "id": 5002,
+                "name": "Last Release"
+            }
+        ]
+    }
+]

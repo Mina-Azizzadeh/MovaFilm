@@ -1,0 +1,115 @@
+.main {
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #50555ea7;
+    overflow: hidden;
+}
+
+.modal-body {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    height: 35rem;
+    width: 100%;
+    background-color: white;
+    border-top-right-radius: 40px;
+    padding: 1rem 0 1rem 1rem;
+    border-top-left-radius: 40px;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 0.7rem;
+    color: #E21021;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(215, 215, 215, 0.449);
+    margin-right: 1rem;
+}
+
+.header-line {
+    background-color: #c2c2c2;
+    height: 1px;
+    width: 2rem;
+}
+
+.body {
+    margin-top: 1.2rem;
+}
+
+.filter-title {
+    font-weight: 500;
+}
+
+.filter-options {
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    margin: 0.8rem 0;
+}
+
+.item-name {
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    height: 32px;
+    font-weight: 700;
+    border: 2px solid #e21221;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    color: #e21221;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+.item-name:nth-last-col{
+    margin-right: 0px;
+    background-color: orange;
+}
+
+input[type="checkbox"]:checked+label {
+    background-color: #e21221;
+    color: #ffffff;
+}
+
+input {
+    display: none;
+}
+
+.footer {
+    // padding: 10px 20px 15px 20px;
+    border-top: 1px solid rgba(215, 215, 215, 0.449);
+    padding-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 1.2rem;
+    margin-right: 1rem;
+
+    button {
+        width: 48%;
+        height: 45px;
+        border-radius: 60px;
+        border: none;
+        font-weight: 600;
+    }
+
+    .continue {
+        color: white;
+        background-color: #e21221;
+        box-shadow: 0px 4px 5px rgba(226, 18, 32, 0.267);
+    }
+
+    .continue:disabled {
+        background-color: #C1232F;
+    }
+
+    .skip {
+        background-color: #fce7e9;
+        color: #e21221;
+    }
+}
