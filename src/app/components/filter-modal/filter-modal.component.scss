@@ -46,7 +46,7 @@
 
 .filter-options {
     display: flex;
-    overflow: scroll;
+    overflow: auto;
     align-items: center;
     margin: 0.8rem 0;
 }
@@ -66,10 +66,6 @@
     white-space: nowrap;
 }
 
-.item-name:nth-last-col{
-    margin-right: 0px;
-    background-color: orange;
-}
 
 input[type="checkbox"]:checked+label {
     background-color: #e21221;

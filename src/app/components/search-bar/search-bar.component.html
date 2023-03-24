@@ -1,4 +1,4 @@
-<filter-modal></filter-modal>
+<filter-modal *ngIf="isShowFilterModal"></filter-modal>
 <div class="header">
     <div style="width: 90%; margin-right: 0.7rem;">
         <nz-input-group [nzPrefix]="prefixTemplateUser">
@@ -9,7 +9,7 @@
             </span>
         </ng-template>
     </div>
-    <div class="swap">
+    <div class="swap" (click)="onClickFilter()">
         <span nz-icon nzType="swap" nzTheme="outline"></span>
     </div>
 </div>

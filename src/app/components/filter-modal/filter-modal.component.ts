@@ -1,5 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 import { Filter, FilterOptions } from 'src/app/model/explore';
 import { ExploreService } from 'src/app/services/explore.service';
 
@@ -11,10 +12,10 @@ import { ExploreService } from 'src/app/services/explore.service';
     trigger('fromTheBottom', [
       transition('void => *', [
         style({
-          transform: 'translateY(250px)',
+          transform: 'translateY(300px)',
         }),
         animate(
-          1000,
+          700,
           style({
             transform: 'translateY(0px)',
           })
@@ -25,6 +26,7 @@ import { ExploreService } from 'src/app/services/explore.service';
 })
 export class FilterModalComponent implements OnInit {
   public filterOptions: Filter[] = [];
+  public selectFilter: FilterOptions[] = []
 
   constructor(private filterService: ExploreService) { }
 
@@ -33,15 +35,23 @@ export class FilterModalComponent implements OnInit {
   }
 
   getFilterItem() {
-    this.filterService.getFiltersItem().subscribe((res) => {
+    this.filterService.getFiltersItem().pipe(
+      // map((result) => {
+      //   return result.map((res) => {
+      //     res,
+      //       ({ ...res.items, checked: false })
+      //   })
+      // })
+    ).subscribe((res) => {
       this.filterOptions = res
+      console.log(res)
     })
   }
-  onclickInterest(item: FilterOptions) {
-console.log(item)
+  onClickFilter(item: FilterOptions) {
+    this.selectFilter.push(item)
   }
 
-  onApply(){
-    
+  onApply() {
+    console.log(this.selectFilter)
   }
 }

@@ -12,8 +12,8 @@
         <div class="filter-options">
           <ng-container *ngFor="let item of options.items">
             <div>
-              <input type="checkbox" [id]="item.name" />
-              <label [for]="item.name" class="item-name" (click)="onclickInterest(item)">{{ item.name }}</label>
+              <input type="checkbox" [id]="item.name" (click)="onClickFilter(item)"/>
+              <label [for]="item.name" class="item-name" >{{ item.name }}</label>
             </div>
           </ng-container>
         </div>
