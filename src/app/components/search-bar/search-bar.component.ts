@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'search-bar',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
   public search = ''
-  isShowFilterModal = false
+  public isShowFilterModal = false
+  @Output() searchValue = new EventEmitter<string>()
 
   constructor() { }
 
@@ -16,8 +17,7 @@ export class SearchBarComponent implements OnInit {
 
   onKeyup(letter: any) {
     const search = letter.target.value
-    console.log(search)
-    //u must use switch map 
+    this.searchValue.emit(search)
   }
 
   onClickFilter() {

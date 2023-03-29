@@ -1,0 +1,60 @@
+.main {
+    padding: 15px 0px 80px 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.search {
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 1.3rem;
+    width: 1.3rem;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.filter-options {
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    margin: 0.8rem 0;
+}
+
+.movie-items {
+    margin-right: 20px;
+}
+
+.item-name {
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    height: 32px;
+    font-weight: 700;
+    border: 2px solid #e21221;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    color: #e21221;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+
+input[type="checkbox"]:checked+label {
+    background-color: #e21221;
+    color: #ffffff;
+}
+
+input {
+    display: none;
+}

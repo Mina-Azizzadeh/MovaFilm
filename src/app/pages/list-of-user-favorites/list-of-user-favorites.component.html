@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="title">
+        <div nz-row nzAlign="middle">
+            <div class="logo">
+                <img src="/assets/images/logo-mova.jpeg" height="100%" width="100%">
+            </div>
+            <div nz-col>My List</div>
+        </div>
+        <div>
+            <span nz-icon nzType="search" nzTheme="outline" class="search" [routerLink]="['/mova/explore']"
+                routerLinkActive="router-link-active"></span>
+        </div>
+    </div>
+    <main>
+        <div class="filter-options">
+            <ng-container *ngFor="let category of filterItems.items">
+                <div>
+                    <input type="checkbox" [id]="category.name" />
+                    <label [for]="category.name" class="item-name">{{ category.name }}</label>
+                </div>
+            </ng-container>
+        </div>
+        <div class="movie-items">
+            <movie-items [movies]="movies"></movie-items>
+        </div>
+    </main>
+</div>

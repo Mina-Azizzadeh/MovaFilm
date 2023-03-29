@@ -12,6 +12,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { ExploreComponent } from './explore/explore.component';
 import { PagesComponent } from './pages.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { ListOfUserFavoritesComponent } from './list-of-user-favorites/list-of-user-favorites.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     ControlValueAccessorComponent,
     NotificationComponent,
     ExploreComponent,
-    PagesComponent
+    PagesComponent,
+    ListOfUserFavoritesComponent
   ],
   imports: [
     CommonModule,

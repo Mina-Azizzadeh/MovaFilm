@@ -4,6 +4,7 @@ import { MoviesListComponent } from '../components/movies-list/movies-list.compo
 import { ExploreComponent } from './explore/explore.component';
 import { HomeComponent } from './home/home.component';
 import { NotificationComponent } from './home/notification/notification.component';
+import { ListOfUserFavoritesComponent } from './list-of-user-favorites/list-of-user-favorites.component';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'explore',
         component: ExploreComponent,
+      },
+      {
+        path: 'my-list',
+        component: ListOfUserFavoritesComponent,
       }
     ]
   },

@@ -1,4 +1,4 @@
 <div class="main">
-    <search-bar></search-bar>
+    <search-bar (searchValue)="searchValue($event)"></search-bar>
     <movie-items [movies]="movies"></movie-items>
 </div>

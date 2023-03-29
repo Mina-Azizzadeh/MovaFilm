@@ -20,4 +20,15 @@ export class ExploreComponent implements OnInit {
       this.movies = result
     })
   }
+
+  searchValue(search: string) {
+    const body: Movie[] = []
+    this.movies.filter((res) => {
+      if (res.name.includes(search)) {
+        body.push(res)
+        this.movies = body
+        console.log(body)
+      } else { console.log(body) }
+    })
+  }
 }

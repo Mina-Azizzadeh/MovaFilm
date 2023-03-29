@@ -48,7 +48,7 @@ export class NavbarComponent implements OnInit {
     {
       title: 'My List',
       icon: 'inbox',
-      routerLink: '/',
+      routerLink: './my-list',
     },
     {
       title: 'Download',
