@@ -27,7 +27,7 @@ export class ListOfUserFavoritesComponent implements OnInit {
 
   getMovieData() {
     this.movieServie.getCarouselData().subscribe((result) => {
-      this.movies = result
+      // this.movies = result
     })
   }
 

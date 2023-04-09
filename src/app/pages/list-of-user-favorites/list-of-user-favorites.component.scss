@@ -58,3 +58,24 @@ input[type="checkbox"]:checked+label {
 input {
     display: none;
 }
+
+
+.empty {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-right: 20px;
+    margin-top: 8rem;
+
+    .empty-img {
+        margin: 0 auto;
+        max-width: 16rem;
+    }
+
+    .empty-title {
+        font-size: 1.2em;
+        color: #e21221;
+        font-weight: 600;
+        margin: 1rem 0 0.5rem 0;
+    }
+}

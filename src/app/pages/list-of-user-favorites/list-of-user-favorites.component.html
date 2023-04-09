@@ -12,7 +12,7 @@
         </div>
     </div>
     <main>
-        <div class="filter-options">
+        <div class="filter-options" *ngIf="movies.length">
             <ng-container *ngFor="let category of filterItems.items">
                 <div>
                     <input type="checkbox" [id]="category.name" />
@@ -20,8 +20,17 @@
                 </div>
             </ng-container>
         </div>
-        <div class="movie-items">
+        <div class="movie-items" *ngIf="movies.length">
             <movie-items [movies]="movies"></movie-items>
+        </div>
+        <div *ngIf="!movies.length" class="empty">
+            <div class="empty-img">
+                <img src="../../../assets/images/emptyMyList.png" width="80%">
+            </div>
+            <div class="empty-title"> 
+                Your List is Empty
+            </div>
+            <div>it seems that you haven't added any movies to the list</div>
         </div>
     </main>
 </div>

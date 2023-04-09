@@ -4,6 +4,10 @@
         "title": "Categories",
         "items": [
             {
+                "id": 1000,
+                "name": "All Categories"
+            },
+            {
                 "id": 1001,
                 "name": "Movie"
             },
@@ -30,7 +34,7 @@
         "title": "Regions",
         "items": [
             {
-                "id": 2001,
+                "id": 2000,
                 "name": "All Regions"
             },
             {
@@ -55,6 +59,10 @@
         "id": 3,
         "title": "Genre",
         "items": [
+            {
+                "id": 3000,
+                "name": "All Genre"
+            },
             {
                 "id": 3001,
                 "name": "Action"
