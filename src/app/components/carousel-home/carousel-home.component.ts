@@ -19,11 +19,11 @@ export class CarouselHomeComponent implements OnInit {
   }
 
   onPlay(movie: Movie) {
-    console.log(movie)
+    // console.log(movie)
   }
 
   onClickMyList(movie: Movie) {
-    console.log(movie)
+    // console.log(movie)
   }
 
   onNotification() {

@@ -34,6 +34,4 @@ export class ExploreComponent implements OnInit {
     })
     this.moviesSearch = body
   }
-
-
 }

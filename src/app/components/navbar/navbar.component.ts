@@ -65,11 +65,4 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { }
-
-  onClickNav(navItem: NavOption) {
-    console.log(navItem)
-  }
-
-  onRouterLinkActive(e: any) {
-  }
 }

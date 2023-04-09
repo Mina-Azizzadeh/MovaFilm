@@ -1,8 +1,6 @@
 <div class="navbar" @fromTheBottom>
   <ng-container *ngFor="let item of navOption">
-    <div [routerLink]="[item.routerLink]" routerLinkActive="active"
-     [routerLinkActiveOptions]="{ exact: true }"
-      (isActiveChange)="onRouterLinkActive($event)" (click)="onClickNav(item)">
+    <div [routerLink]="[item.routerLink]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <span nz-icon [nzType]="item.icon" nzTheme="outline"></span>
       <div>{{item.title}}</div>
     </div>
