@@ -1,4 +1,14 @@
 <div class="main">
     <search-bar (searchValue)="searchValue($event)"></search-bar>
     <movie-items [movies]="moviesSearch"></movie-items>
+    <div *ngIf="!moviesSearch.length" class="empty">
+        <div class="empty-img">
+            <img src="../../../assets/images/notFoundPicture.png" width="80%">
+        </div>
+        <div class="empty-title">
+            Not found
+        </div>
+        <div>Sorry, the keyword you entered could not be found. Try to 
+            check again or search with other keywords.</div>
+    </div>
 </div>

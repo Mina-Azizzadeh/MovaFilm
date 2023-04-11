@@ -2,3 +2,23 @@
     padding: 15px 20px 80px 20px;
     z-index: -1;
 }
+
+
+.empty {
+    text-align: center;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 7rem;
+
+    .empty-img {
+        margin: 0 auto;
+        max-width: 19rem;
+    }
+
+    .empty-title {
+        font-size: 1.2em;
+        color: #e21221;
+        font-weight: 600;
+        margin: 1rem 0 0.5rem 0;
+    }
+}

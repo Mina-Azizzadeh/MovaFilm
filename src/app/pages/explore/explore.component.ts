@@ -20,7 +20,7 @@ export class ExploreComponent implements OnInit {
   getMovieData() {
     this.movieServie.getCarouselData().subscribe((result) => {
       this.movies = result
-      this.moviesSearch.length >= 0 ? this.moviesSearch = result : []
+      this.moviesSearch.length >= 0 ? this.moviesSearch = this.movies : []
     })
   }
 
@@ -33,5 +33,7 @@ export class ExploreComponent implements OnInit {
       }
     })
     this.moviesSearch = body
+    console.log(this.moviesSearch)
+    console.log(this.movies)
   }
 }
