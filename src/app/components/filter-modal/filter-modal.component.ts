@@ -1,7 +1,7 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
-import { Subject } from 'rxjs';
+import { map, Subject } from 'rxjs';
 import { Filter, FilterOptions } from 'src/app/model/explore';
 import { ExploreService } from 'src/app/services/explore.service';
 
@@ -25,12 +25,14 @@ import { ExploreService } from 'src/app/services/explore.service';
     ]),
   ],
 })
+
 export class FilterModalComponent implements OnInit {
   public filterOptions: Filter[] = [];
   public selectFilter: FilterOptions[] = []
   @Output() filter = new Subject<FilterOptions[]>();
 
-  constructor(private filterService: ExploreService,
+  constructor(
+    private filterService: ExploreService,
     private modal: NzModalService) { }
 
   ngOnInit(): void {
@@ -39,13 +41,30 @@ export class FilterModalComponent implements OnInit {
 
   getFilterItem() {
     this.filterService.getFiltersItem().pipe(
+      map((filter) => {
+        return filter.map(res => {
+          return ({
+            ...res,
+            id: res.id,
+            title: res.title,
+            items: res.items.map((item) => ({
+              ...item,
+              checked: false
+            }))
+          })
+        })
+      })
     ).subscribe((res) => {
       this.filterOptions = res
+      console.log('result in filter:', res)
     })
   }
 
   onClickFilter(item: FilterOptions) {
-    this.selectFilter.push(item)
+    item.checked = !item.checked
+    if (item.checked == true) {
+      this.selectFilter.push(item)
+    }
   }
 
   onApply() {

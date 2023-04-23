@@ -12,7 +12,7 @@
         <div class="filter-options">
           <ng-container *ngFor="let item of options.items">
             <div>
-              <input type="checkbox" [id]="item.name" (click)="onClickFilter(item)" />
+              <input type="checkbox" [id]="item.name" (click)="onClickFilter(item)" [checked]="item.checked" />
               <label [for]="item.name" class="item-name">{{ item.name }}</label>
             </div>
           </ng-container>

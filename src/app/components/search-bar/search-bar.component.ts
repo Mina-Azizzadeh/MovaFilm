@@ -16,7 +16,7 @@ export class SearchBarComponent implements OnInit {
   constructor(private modalService: FilterModalService) { }
 
   ngOnInit(): void {
-    console.log(this.filterList?.length)
+    this.modalService.openModal()
   }
 
   onKeyup(letter: any) {

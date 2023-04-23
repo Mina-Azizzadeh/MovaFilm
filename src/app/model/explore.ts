@@ -6,5 +6,6 @@ export interface Filter {
 
 export interface FilterOptions {
     id: number,
-    name: string
+    name: string,
+    checked: boolean
 }
