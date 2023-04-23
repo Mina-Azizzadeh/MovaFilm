@@ -1,18 +1,22 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FilterOptions } from 'src/app/model/explore';
+import { FilterModalService } from '../filter-modal/filter-service';
 
 @Component({
   selector: 'search-bar',
   templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.scss']
+  styleUrls: ['./search-bar.component.scss'],
+  providers: [FilterModalService]
 })
 export class SearchBarComponent implements OnInit {
   public search = ''
-  public isShowFilterModal = false
   @Output() searchValue = new EventEmitter<string>()
+  public filterList: FilterOptions[] = []
 
-  constructor() { }
+  constructor(private modalService: FilterModalService) { }
 
   ngOnInit(): void {
+    console.log(this.filterList?.length)
   }
 
   onKeyup(letter: any) {
@@ -21,6 +25,9 @@ export class SearchBarComponent implements OnInit {
   }
 
   onClickFilter() {
-    this.isShowFilterModal = true
+    const modal = this.modalService.openModal()
+    modal.getContentComponent().filter.subscribe((res) => {
+      this.filterList = res
+    })
   }
 }

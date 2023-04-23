@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="modal-body" @fromTheBottom>
+  <div class="modal-body">
     <div class="header">
       <!-- <div class="header-line"></div> -->
       Sort & Filter
@@ -12,15 +12,15 @@
         <div class="filter-options">
           <ng-container *ngFor="let item of options.items">
             <div>
-              <input type="checkbox" [id]="item.name" (click)="onClickFilter(item)"/>
-              <label [for]="item.name" class="item-name" >{{ item.name }}</label>
+              <input type="checkbox" [id]="item.name" (click)="onClickFilter(item)" />
+              <label [for]="item.name" class="item-name">{{ item.name }}</label>
             </div>
           </ng-container>
         </div>
       </ng-container>
     </div>
     <div class="footer">
-      <button class="skip" type="button">Reset</button>
+      <button class="skip" type="button" (click)="onReset()">Reset</button>
       <button class="continue" type="submit" (click)="onApply()">Apply</button>
     </div>
   </div>

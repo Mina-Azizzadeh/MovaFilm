@@ -1,3 +1,7 @@
+.main {
+    padding: 15px 0 0 20px;
+}
+
 nz-input-group {
     height: 2.7rem;
     padding: 0 1rem;
@@ -37,4 +41,27 @@ nz-input-group {
 .header {
     display: flex;
     justify-content: center;
+    padding-right: 20px;
+}
+
+.filter-item {
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    height: 32px;
+    font-weight: 700;
+    border: 2px solid #e21221;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    color: #ffffff;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+    background-color: #e21221;
+}
+
+.filters {
+    display: flex;
+    overflow: auto;
+    align-items: center;
 }

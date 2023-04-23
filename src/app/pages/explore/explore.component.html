@@ -1,5 +1,5 @@
+<search-bar (searchValue)="searchValue($event)"></search-bar>
 <div class="main">
-    <search-bar (searchValue)="searchValue($event)"></search-bar>
     <movie-items [movies]="moviesSearch"></movie-items>
     <div *ngIf="!moviesSearch.length" class="empty">
         <div class="empty-img">
