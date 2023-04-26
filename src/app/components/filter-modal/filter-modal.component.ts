@@ -39,35 +39,22 @@ export class FilterModalComponent implements OnInit {
     this.getFilterItem()
   }
 
-  getFilterItem() {
-    this.filterService.getFiltersItem().pipe(
-      map((filter) => {
-        return filter.map(res => {
-          return ({
-            ...res,
-            id: res.id,
-            title: res.title,
-            items: res.items.map((item) => ({
-              ...item,
-              checked: false
-            }))
-          })
-        })
-      })
-    ).subscribe((res) => {
-      this.filterOptions = res
-      console.log('result in filter:', res)
-    })
-  }
-
   onClickFilter(item: FilterOptions) {
     item.checked = !item.checked
+    // console.log('name:', item.name, '| checked:', item.checked)
     if (item.checked == true) {
       this.selectFilter.push(item)
     }
   }
+  
+  getFilterItem() {
+    this.filterService.getFiltersItem().subscribe((res) => {
+      this.filterOptions = res
+    })
+  }
 
   onApply() {
+
     this.filter.next(this.selectFilter)
     this.modal.closeAll()
   }
